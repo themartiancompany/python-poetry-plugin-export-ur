@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
+# Maintainer: Truocolo <truocolo@aol.com>
+# Maintainer: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Maintainer: Caleb Maclennan <caleb@alerque.com>
 
@@ -32,3 +36,4 @@ package() {
   python -m installer -d "$pkgdir" dist/*.whl
   install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" LICENSE
 }
+
