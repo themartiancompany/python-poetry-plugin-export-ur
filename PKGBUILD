@@ -33,7 +33,15 @@ check() {
 
 package() {
   cd poetry-plugin-export-$pkgver
-  python -m installer -d "$pkgdir" dist/*.whl
-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" LICENSE
+  python \
+    -m \
+      installer \
+    --destdir="${pkgdir}" \
+    dist/*.whl
+  install \
+    -Dm644 \
+    -t \
+    "${pkgdir}/usr/share/licenses/${pkgname}/" \
+    LICENSE
 }
 
