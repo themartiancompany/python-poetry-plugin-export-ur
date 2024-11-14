@@ -57,7 +57,7 @@ sha512sums=(
 build() {
   ls
   cd \
-    "${_proj}-${_pkg}-${pkgver}"
+    "${_pkg}-${pkgver}"
   "${_py}" \
     -m \
       build \
@@ -72,7 +72,7 @@ check() {
       -c \
         "import site; print(site.getsitepackages()[0])")
   cd \
-    "${_proj}-${_pkg}-${pkgver}"
+    "${_pkg}-${pkgver}"
   "${_py}" \
     -m \
       installer \
@@ -85,7 +85,7 @@ check() {
 
 package() {
   cd \
-    "${_proj}-${_pkg}-${pkgver}"
+    "${_pkg}-${pkgver}"
   "${_py}" \
     -m \
       installer \
